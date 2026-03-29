@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mynth | Home</title>
+    <title>Mynth 的个人主页</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -39,41 +39,53 @@
             animation: fadeIn 1.2s ease-out;
         }
 
+        /* 优化后的导航栏：减小了 padding 并在底部增加了更细的边框 */
         .nav-bar {
             display: flex;
             justify-content: center;
-            gap: 40px; /* 增加间距让英文排版更舒展 */
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.5);
+            gap: 40px;
+            padding: 1rem; /* 缩小了导航栏内边距 */
+            background: rgba(255, 255, 255, 0.4);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .nav-link {
             text-decoration: none;
             color: var(--text-color);
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             opacity: 0.6;
             transition: all 0.3s ease;
-            font-family: 'JetBrains Mono', monospace; /* 英文使用等宽字体更有科技感 */
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .nav-link:hover {
             opacity: 1;
             color: var(--accent-color);
-            transform: translateY(-2px);
         }
 
-        .content { padding: 4rem 2rem; }
-        h1 { font-size: 2rem; margin-bottom: 1.5rem; color: #1a1a1a; }
-        p { font-size: 1.05rem; font-weight: 300; margin-bottom: 1rem; line-height: 1.8; }
+        /* 优化后的内容区：减小了上边距 */
+        .content { 
+            padding: 2.5rem 2rem; /* 缩小了上方的 padding */
+        }
+
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; color: #1a1a1a; }
+        p { font-size: 1rem; font-weight: 300; margin-bottom: 0.8rem; line-height: 1.6; }
         
         .cs-tag {
             font-family: 'JetBrains Mono', monospace;
             background: rgba(52, 152, 219, 0.1);
             color: var(--accent-color);
-            padding: 2px 8px;
+            padding: 2px 6px;
             border-radius: 4px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
         }
 
         @keyframes fadeIn {
@@ -92,10 +104,11 @@
         </nav>
 
         <main class="content">
-            <h1>欢迎来到我的个人网站</h1>
+            <h1>欢迎来到 Mynth 的个人网站</h1>
             <p>这是我用 GitHub Pages 搭建的第一个站点！</p>
             <p>一名 <span class="cs-tag">计科生</span>，这里未来会存放我的项目和笔记。</p>
-            <p>Click the navigation bar above to explore my work.</p>
+            <p style="opacity: 0.6; font-size: 0.9rem;">Explore my notes and projects via the links above.</p>
+            <div class="divider"></div>
         </main>
     </div>
 
