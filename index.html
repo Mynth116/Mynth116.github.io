@@ -89,6 +89,27 @@
 <body>
 
     <div class="glass-card">
+    <nav style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 20px;">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="notes.html" class="nav-link">学习笔记</a>
+        <a href="projects.html" class="nav-link">课程作业</a>
+    </nav>
+    
+    <style>
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            opacity: 1;
+            border-bottom: 2px solid var(--accent-color);
+        }
+    </style>
         <h1>欢迎来到我的个人网站</h1>
         <p>这是我用 GitHub Pages 搭建的第一个站点！</p>
         <p>一名 <span class="cs-tag">计科生</span>，这里未来会存放我的项目和笔记。</p>
